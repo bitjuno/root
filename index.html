@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display the extracted part of the string</p>
+
+<button onclick="myFunction()">Try it</button>
+<p id="length"></p>
+<p id="first"></p>
+<p id="second"></p>
+<p id="full"></p>
+
+<script>
+function myFunction() {
+    var str = '{"type":"DISTRIBUTE","sender":"SYSTEM"}'; 
+    
+    var length = str.length;
+    var halfNo =Math.round(str.length/2);
+     document.getElementById("length").innerHTML ="Total :"+length+" half: "+halfNo;
+    document.getElementById("first").innerHTML =str.slice(0, halfNo);
+    document.getElementById("second").innerHTML = str.slice(halfNo, length);
+    document.getElementById("full").innerHTML = str.slice(0, halfNo)+ 			               str.slice(halfNo, length);
+}
+</script>
+
+</body>
+</html>
